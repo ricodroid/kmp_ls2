@@ -1,5 +1,6 @@
 package com.petros.efthymiou.dailypulse.android
 
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -16,6 +17,10 @@ class RecyclerAdapter(val articleList: List<Article>) : RecyclerView.Adapter<Vie
     override fun onBindViewHolder(holder: ViewHolderList, position: Int) {
         val article = articleList[position]
         holder.characterList.text = article.title
+        holder.characterText1.text = article.desc
+        holder.characterText2.text = article.date
+        val imageUrl = Uri.parse(article.imageUrl)
+        holder.characterImage.setImageURI(imageUrl)
     }
 
     override fun getItemCount(): Int = articleList.size
