@@ -50,4 +50,6 @@ dependencies {
     implementation(libs.koin.androidx.compose)
     implementation (libs.accompanist.swiperefresh)
     debugImplementation(libs.compose.ui.tooling)
+
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
 }
